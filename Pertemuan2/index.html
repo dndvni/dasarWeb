@@ -1,26 +1,74 @@
 <html>
     <head>
-        <title>format text CSS</title>
-        <link rel="stylesheet" type="text/css" href="styleText.css">
+        <title>Position  CSS</title>
+        <link rel="stylesheet" type="text/css" href="stylePosition.css">
     </head>
 
     <body>
-        <p class="tulisan_warna">Mengatur format text dengan CSS</p>
-        <p class="par1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed consectetur, purus nec consectetur bibendum, nunc ipsum 
-            congue enim, at consectetur arcu ligula non velit. Ut enim ad 
-            minim veniam. duis vel aute irure dolor in felis non ante et
-            consectetur exercitation ullamco laboris nisi ut aliquip ex 
-            ea commodo consequat.
-
-            lorem Ipsum is true, consectetur adipiscing elit et justo consequ
-            etiam vel neque ac neque. Duis euismod, velit eget  erat vol nostrud
-            ex, sed lobortis est. Sed vel sem id velit bibendum erat vol consequ
-            etiam vel neque ac neque. Duis euismod, velit eget  erat vol. Null 
-            vel sem id velit bibendum erat vol. Nullam auctor nisi ut neque. Al
-            vel sem id velit bibendum erat vol. Nullam auctor nisi ut neque. Aliquam.
-            Nullam auctor nisi ut neque. Aliquam. 
+        <h2>Position: static;</h2>
+        <p>Position static digunakan untuk mengatur element menjadi statis secara default.
+            elemen akan mengikuti posisi normal secara default,
+            elemen tidak dipengaruhi ileh properti seperti top, bottom, left dan right.:
         </p>
+        <div class="static">
+            elemen ini diatur menggunakan posisi static;
+        </div>
+        <br><br><br><br>
+        <h2>Position: relative;</h2>
+
+        <p>sebuah element HTML yang menggunakan position relative akan terletak pada posisi normal.
+            mengatur properti atas, kanan, bawah, dan kiri dari elemen yang diposisikan dengan "relatif"
+            akan membuatnya jauh dari posisi normalnya.
+            konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalakan oleh elemen tersebut.:
+        </p>
+        <div class="relative"></div>
+            elemen ini diatur menggunakan posisi relative;
+        </div>
+        <br><br><br><br>
+        <h2>Posistion: fixed;</h2>
+
+        <p>sebuah elemen HTML yang di setting dengan position fixed akan memiliki sifat tetap,
+            tanpa ada perubahan bahkan jika halaman website di scrooll.
+            berlaku pengaturan left, bottom, top dan right pada posistin fixed:
+        </p>
+
+        <div class="fixed"></div>
+            elemen ini diatur menggunakan posisi fixed;
+        </div>
+        <br><br><br><br>
+        <h2>Position: absolute;</h2>
+
+        <p>Elemnt HTML yang menggunakan osition absolute akan diposisikan relatif dengan
+            element lain yang mendahuluinya yang terdekat,
+            bukan relatif terhadapa lyar secara normal.:
+        </p>
+
+        <div class="relative1">Elemen ini diatur menggunakan posisi: relative;
+            <div class="absolute">elemen ini diatur menggunakan posisi: absolute;</div>
+        </div>
+
+        <br><br><br><br>
+        <br><br><br><br>
+
+        <h2>Position: sticky;</h2>
+        <p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi stcky bekerja.</p>
+        <p>Catatan: IE/Edge 15 dan versi yang lebih lama tidak mendukung sticky.</p>
+
+        <div class="sticky">Hola Aku adalah sticky!</div>
+
+        <div class="padding-bottom:200px">
+            <p>Dalam contoh ini, elemen sticky menempel pada posisi paling atas halaman (top:0),
+                ketika mencapai posisi scrollnya.
+            </p>
+            <p>Cobalah untuk melakukan scroll.</p>
+            <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor sit amet, illum definiion no quo, maluisset
+                consludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molistiae voluptatibus.
+            </p>
+            <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor sit amet, illum definiion no quo, maluisset
+                consludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molistiae voluptatibus.
+            </p>
+        </div>
     </body>
 </html>
