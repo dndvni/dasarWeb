@@ -1,0 +1,119 @@
+<!DOCTYPE html>  
+<html lang="id">  
+
+<head>
+    <title>Tugas Minggu 3</title>  
+    <style>  
+        body {  
+            color: red;  
+            margin: 2;  
+            justify-content: center;  
+            align-items: center;  
+            background-color: white;  
+            padding: 30px;  
+        }  
+
+        form {  
+            padding: 30px;  
+            width: 300px;  
+        }  
+
+        .container {  
+            display: flex;  
+            justify-content: center;  
+            align-content: center;
+        }
+
+        .form-group {  
+            margin-bottom: 15px;  
+        }  
+
+        label {  
+            margin-bottom: 3px;  
+            display: block;  
+        }  
+
+        input[type="text"],  
+        input[type="date"],  
+        textarea {  
+            width: 100%;  
+            padding: 8px;  
+            border: 1px solid black;  
+            border-radius: 3%;  
+        }  
+
+        button {  
+            padding: 10px;  
+            border-radius: 3px;  
+            border: 1px solid black;   
+            background-color: gray;  
+            color: white;  
+            width: 50%;  
+        }  
+
+        button:hover {  
+            background-color: whitesmoke;  
+        }  
+    </style>  
+</head>  
+
+<body>  
+    <h1>Tugas Minggu 3</h1>  
+    <h2><b>04_Adinda Mirza Devani_2341720046</b></h2>
+    <form id="myForm" onsubmit="return formValidasi()">  
+        <div class="form-group">  
+            <label for="nama"><b>Nama Lengkap:</b></label>  
+            <input type="text" id="nama" required>  
+        </div>  
+        <div class="form-group">  
+            <label for="alamat"><b>Alamat:</b></label>  
+            <textarea id="alamat" required></textarea>  
+        </div>  
+        <div class="form-group">  
+            <label for="tanggal-lahir"><b>Tanggal Lahir:</b></label>  
+            <input type="date" id="tanggal-lahir" required>  
+        </div>  
+        <div class="form-group">  
+            <label><b>Jenis Kelamin:</b></label>  
+            <input type="radio" name="jenisKelamin" value="Laki-Laki" required> Laki-Laki  
+            <input type="radio" name="jenisKelamin" value="Perempuan" required> Perempuan  
+        </div>  
+        <div class="form-group">  
+            <label><b>Pekerjaan:</b></label>  
+            <input type="checkbox" name="pekerjaan" value="Swasta"> Swasta  
+            <input type="checkbox" name="pekerjaan" value="PNS"> PNS  
+            <input type="checkbox" name="pekerjaan" value="Lain-Lain"> Lain-Lain  
+        </div> 
+        <div class="form-group">
+            <label><b>Hobi:</b></label>
+            <input type="checkbox" name="hobi" value="Berenang"> Berenang
+            <input type="checkbox" name="hobi" value="Berlari"> Berlari
+            <input type="checkbox" name="hobi" value="lain-lain"> Lain-lain
+        </div> 
+        <div class="form-group">  
+            <input type="checkbox" id="kirim" required>  
+            <label for="kirim">check jika anda akan mengirimkakn data ini</label>  
+        </div>  
+        <button type="submit">Kirim!</button>  
+    </form>  
+
+    <script>  
+        function formValidasi() {  
+            const nama = document.getElementById('nama').value.trim();  
+            const alamat = document.getElementById('alamat').value.trim();  
+            const tanggalLahir = document.getElementById('tanggal-lahir').value;  
+            const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked');  
+            const pekerjaan = document.querySelector('input[name="pekerjaan"]:checked');  
+            const kirim = document.getElementById('kirim').checked;  
+
+            if (!nama || !alamat || !tanggalLahir || !jenisKelamin || !pekerjaan || !kirim) {  
+                alert("Semua wajib diisi!");  
+                return false;  
+            }  
+            alert("Data Anda Berhasil Terkirim");  
+            return true;  
+        }  
+    </script>  
+</body>  
+
+</html>
