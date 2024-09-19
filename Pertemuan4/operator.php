@@ -20,3 +20,9 @@ $hasilAnd = $a && $b;
 $hasilOr = $a || $b;
 $hasilNotA = !$a;
 $hasilNotB = !$b;
+
+$a += $b;
+$a -= $b;
+$a *= $b;
+$a /= $b;
+$a %= $b;
