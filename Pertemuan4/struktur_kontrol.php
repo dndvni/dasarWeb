@@ -70,6 +70,14 @@ if ($hargaProduk > 100000) {
     echo "Harga setelah diskon: Rp " . 
     number_format($hargaSetelahDiskon, 0, ',', '.');
 } else {
-    echo "Harga produk tidak memenuhi syarat untuk mendapat diskon.";
+    echo "Harga produk tidak memenuhi syarat untuk mendapat diskon. <br>";
 }
+
+// soal no 4.8
+$poin = 600;
+$totalSkor = $poin;
+$hadiahTambahan = ($poin > 500) ? 'YA' : 'TIDAK';
+
+echo "<br> Total skor pemain adalah: $totalSkor\n <br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? $hadiahTambahan\n";
 ?>
