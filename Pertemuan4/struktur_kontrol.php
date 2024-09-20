@@ -53,15 +53,23 @@ foreach ($nilaiSiswa as $nilai) {
     echo "Nilai: $nilai (Lulus) <br>";
 }
 
+// soal no 4.6
 $nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 90];
-
 sort($nilaiSiswa);
-
 $nilaiSiswa = array_slice($nilaiSiswa, 2, -2);
-
 $totalNilai = array_sum($nilaiSiswa);
-
 echo "Total Nilai yang akan digunakan untuk menentukan nilai rata-rata: $totalNilai <br>";
 
+// soal no 4.7
+$hargaProduk = 120000;
+$diskon = 20;
 
+if ($hargaProduk > 100000) {
+    $diskonNominal = ($hargaProduk * $diskon) / 100;
+    $hargaSetelahDiskon = $hargaProduk - $diskonNominal;
+    echo "Harga setelah diskon: Rp " . 
+    number_format($hargaSetelahDiskon, 0, ',', '.');
+} else {
+    echo "Harga produk tidak memenuhi syarat untuk mendapat diskon.";
+}
 ?>
