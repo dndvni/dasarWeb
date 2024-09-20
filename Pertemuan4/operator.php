@@ -58,5 +58,13 @@ $hasilTidakIdnetik = $a !== $b;
 echo "Apakah \$a identik dengan \$b? " . ($hasilIdentik ? 'Ya' : 'Tidak') . "<br>";
 echo "Apakah \$a tidak identik dengan \$b? " . ($hasilTidakIdnetik ? 'Ya' : 'Tidak') . "<br>";
 
+$totKursi = 45;
+$diTempati = 28;
 
+$kusriKosong = $totKursi - $diTempati;
+
+$persentaseKosong = ($kusriKosong * $totKursi) * 100;
+
+echo "Jumlah kursi yang kosong: {$kusriKosong} <br>";
+echo "Persentase kursi yang masih kosong = " . number_format($persentaseKosong, 2) . "%.";
 ?>
