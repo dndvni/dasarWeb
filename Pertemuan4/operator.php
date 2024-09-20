@@ -51,4 +51,12 @@ echo "Hasil pemagian  / b: {$a} <br>";
 $a /= $b;
 echo "hasil pembagian a /= b: {$a} <br>";
 
+
+$hasilIdentik = $a === $b;
+$hasilTidakIdnetik = $a !== $b;
+
+echo "Apakah \$a identik dengan \$b? " . ($hasilIdentik ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah \$a tidak identik dengan \$b? " . ($hasilTidakIdnetik ? 'Ya' : 'Tidak') . "<br>";
+
+
 ?>
