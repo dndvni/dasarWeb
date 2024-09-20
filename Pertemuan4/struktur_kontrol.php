@@ -52,4 +52,16 @@ foreach ($nilaiSiswa as $nilai) {
     }
     echo "Nilai: $nilai (Lulus) <br>";
 }
+
+$nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 90];
+
+sort($nilaiSiswa);
+
+$nilaiSiswa = array_slice($nilaiSiswa, 2, -2);
+
+$totalNilai = array_sum($nilaiSiswa);
+
+echo "Total Nilai yang akan digunakan untuk menentukan nilai rata-rata: $totalNilai <br>";
+
+
 ?>
