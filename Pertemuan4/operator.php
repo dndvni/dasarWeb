@@ -9,23 +9,10 @@ $hasilBagi = $a / $b;
 $sisaBagi = $a % $b;
 $pangkat = $a ** $b;
 
-$hasilSama = $a == $b;
-$hasilTidakSama = $a != $b;
-$hasilLebihKecil = $a < $b;
-$hasilLebihBesar = $a > $b;
-$hasilLebihKecilSama = $a <= $b;
-$hasilLebihBesarSama = $a >= $b;
-
-$hasilAnd = $a && $b;
-$hasilOr = $a || $b;
-$hasilNotA = !$a;
-$hasilNotB = !$b;
-
-$a += $b;
-$a -= $b;
-$a *= $b;
-$a /= $b;
-$a %= $b;
-
-$hasilIdentik = $a === $b;
-$hasilTidakIdentik = $a !== $b;
+echo "Hasil penjumlahan {$a} + {$b} = {$hasilTambah} <br>";
+echo "Hasil pengurangan {$a} - {$b} = {$hasilKurang} <br>";
+echo "Hasil perkalian {$a} * {$b} = {$hasilKali} <br>";
+echo "Hasil pembagian {$a} / {$b} = {$hasilBagi} <br>";
+echo "Sisa pembagian {$a} % {$b} = {$sisaBagi} <br>";
+echo "Hasil pemangkatan {$a} ** {$b} = {$pangkat} <br>";
+?>
