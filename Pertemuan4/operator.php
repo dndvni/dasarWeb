@@ -29,4 +29,14 @@ echo "Apakah {$a} lebih kecil dari {$b}? " . ($hasilLebihKecil ? 'Ya': 'Tidak') 
 echo "Apakah {$a} lebih besar dari {$b}? " . ($hasilLebihBesar ? 'Ya' : 'Tidak') . "<br>";
 echo "Apakah {$a} lebih kecil atau sama dengan {$b}? " . ($hasilLebihKecilSama ? 'Ya' : 'Tidak') . "<br>";
 echo "Apakah {$a} lebih besar atau sama dnegan {$b}? " . ($hasilLebihBesarSama ? 'Ya' : 'Tidak') . "<br>";
+
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+
+echo "Hasil {$a} AND {$b}: " . ($hasilAnd ? 'true' : 'false') . "<br>";
+echo "Hasil {$a} OR {$b}: " . ($hasilOr ? 'true' : 'false') . "<br>";
+echo "Not {$a}:  " . ($hasilNotA ? "true" : "false") . "<br>";
+echo "Not {$b}: " . ($hasilNotB ? "true" : "false") . "<br>";
 ?>
