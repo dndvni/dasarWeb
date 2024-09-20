@@ -39,4 +39,16 @@ echo "Hasil {$a} AND {$b}: " . ($hasilAnd ? 'true' : 'false') . "<br>";
 echo "Hasil {$a} OR {$b}: " . ($hasilOr ? 'true' : 'false') . "<br>";
 echo "Not {$a}:  " . ($hasilNotA ? "true" : "false") . "<br>";
 echo "Not {$b}: " . ($hasilNotB ? "true" : "false") . "<br>";
+
+$a += $b;
+echo "Hasil penjumlahan a += b: {$a} <br>";
+$a -= $b;
+echo "Hasil penjumlahan a -= b: {$a} <br>";
+$a *= $b;
+echo "Hasil perkalian a *= b: {$a} <br>";
+$a /= $b;
+echo "Hasil pemagian  / b: {$a} <br>";
+$a /= $b;
+echo "hasil pembagian a /= b: {$a} <br>";
+
 ?>
