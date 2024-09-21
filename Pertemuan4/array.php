@@ -58,3 +58,27 @@ echo "Daftar nilai mahasiswa dalam mata kuliah $mataKuliah: <br>";
 foreach ($daftarNilai[$mataKuliah] as $nilai) {
     echo "Nama: {$nilai[0]}, Nilai: {$nilai[1]} <br>";
 }
+echo "<br><br>";
+
+// soal No 5.4
+$siswa = [
+    ["Alice", 85],
+    ["Bob", 92],
+    ["Charlie", 78],
+    ["David", 64],
+    ["Eve", 90],
+];
+
+$total_Nilai = 0;
+foreach ($siswa as $nilai) {
+    $total_Nilai += $nilai[1];
+}
+$rata_rata = $total_Nilai / count($siswa);
+
+echo "Daftar Nilai Siswa yang mencapai Nilai di Atas Rata-rata kelas: <br>";
+foreach ($siswa as $siswa) {
+    if ($siswa[1] > $rata_rata) {
+        echo $siswa[0] . ": " . $siswa[1];
+    }
+}
+
