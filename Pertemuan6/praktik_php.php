@@ -30,6 +30,7 @@
 
 
 // membuat fungsi
+// no 8
 function hitungUmur($thn_lahir, $thn_sekarang) {
     $umur = $thn_sekarang - $thn_lahir;
     return $umur;
