@@ -1,0 +1,43 @@
+body {
+    padding: 20px;
+}
+
+#slide {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.ratarata {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+  .datasiswa {
+    display: none;
+    background-color: burlywood;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+th {
+    background-color: white;
+}
