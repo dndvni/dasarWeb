@@ -52,6 +52,17 @@
         } else {
             echo "Tidak ada yang cocok! <br>";
         }
+        echo "<br><br>";
+
+        // Soal No 5.6
+        $pattern = '/go{n,m}d/'; 
+        $text = 'god is good.';
+        if (preg_match($pattern, $text, $matchess)) {
+            echo "Cocokan: " . $matchess[0];
+        } else {
+            echo "Tidak ada yang cocok! <br>";
+        }
+        echo "<br><br>";
         ?>
     </body>
 </html>
