@@ -15,6 +15,15 @@
         } else {
             echo "Tidak ada huruf kecil!";
         }
+
+        // Soal No 5.2
+        $pattern = '/[0-9]+/';
+        $text = 'There are 123 apples.';
+        if (preg_match($pattern, $text, $matchess)) {
+            echo "Cocokan: " . $matchess[0];
+        } else {
+            echo "Tidak ada yang cocok! <br>";
+        }
         ?>
     </body>
 </html>
