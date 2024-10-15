@@ -33,6 +33,15 @@
         $new_text = preg_replace($pattern, $replacement, $text);
         echo $new_text; // Output: "I like banana pie"
         echo "<br><br>";
+
+        // Soal No 5.4
+        $pattern = '/go*d/'; // Cocokan "god", "good", "gooood", dll.
+        $text = 'god is good.';
+        if (preg_match($pattern, $text, $matchess)) {
+            echo "Cocokan: " . $matchess[0];
+        } else {
+            echo "Tidak ada yang cocok! <br>";
+        }
         ?>
     </body>
 </html>
