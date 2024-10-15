@@ -42,6 +42,16 @@
         } else {
             echo "Tidak ada yang cocok! <br>";
         }
+        echo "<br><br>";
+
+        // Soal No 5.5
+        $pattern = '/go?d/'; // Cocokan "god", "good", "gooood", dll.
+        $text = 'god is good.';
+        if (preg_match($pattern, $text, $matchess)) {
+            echo "Cocokan: " . $matchess[0];
+        } else {
+            echo "Tidak ada yang cocok! <br>";
+        }
         ?>
     </body>
 </html>
