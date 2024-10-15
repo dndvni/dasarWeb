@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $selectedBuah = $_POST['buah'];
+    $selectedBuah = isset($_POST['buah']);
 
     if (isset($_POST['warna'])) {
         $selectedwarna = $_POST['warna'];
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    $selectedJenisKelamin = $_POST['jenis_kelamin'];
+    $selectedJenisKelamin = isset($_POST['jenis_kelamin']) ;
 
     echo "Anda memilih buah: " . $selectedBuah . "<br>";
 
