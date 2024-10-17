@@ -17,6 +17,11 @@
             <span id="email-error" style="color: red;"></span>
             <br>
 
+            <label for="passsword">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passsword-error" style="color: red;"></span>
+            <br>
+
             <input type="submit" value="Submit">
         </form>
 
@@ -41,8 +46,36 @@
                         $("email-error").text("");
                     }
 
-                    if (!valid) {
-                        event.preventDefault();
+                    if (password === "") {
+                        $("#password-error").text("Password harus diisi.");
+                        valid = false;
+                    } else if (password.length < 8) {
+                        $("#password-error").text("Password harus minimal 8 karakter.");
+                        valid = false;
+                    } else {
+                        $("#password-error").text("");
+                    }
+
+                    // if (!valid) {
+                        // event.preventDefault();
+                    // }
+
+                    // soal no. 7.3
+                    if (valid) {
+                        $.ajax({
+                            url: 'proses_validasi.php',
+                            type: 'POST',
+                            data: {
+                                nama: nama,
+                                email: email
+                            },
+                            success:function(response) {
+                                alert("Data berhail teririm: " + response);
+                            },
+                            error:function(xhr, status, error) {
+                                alert("Terjadi Kesalahan: " + error);
+                            }
+                        })
                     }
                 });
             });
