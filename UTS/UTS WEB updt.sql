@@ -1,0 +1,29 @@
+use PendaftaranSeminarDB;
+
+CREATE TABLE Seminar (
+	SeminarID INT PRIMARY KEY IDENTITY(1,1),
+	Judul NVARCHAR(255) NOT NULL,
+	Deskripsi NVARCHAR(MAX),
+	Tanggal DATETIME NOT NULL,
+	Tempat NVARCHAR(255),
+	Kuota INT NOT NULL
+);
+
+CREATE TABLE Peserta (
+	PesertaID INT PRIMARY KEY IDENTITY(1,1),
+	Nama VARCHAR(100) NOT NULL,
+	Email NVARCHAR(150) NOT NULL UNIQUE,
+	Telepon NVARCHAR(15)
+);
+
+CREATE TABLE Pendaftaran (
+	PendaftaranID INT PRIMARY KEY IDENTITY(1,1),
+	PesertaID INT,
+	SeminarID INT,
+	TanggalPendaftaran DATETIME DEFAULT GETDATE(),
+	FOREIGN KEY (PesertaID) REFERENCES Peserta(PesertaID),
+	FOREIGN KEY(SeminarID) REFERENCES Seminar(SeminarID)
+);
+
+ALTER TABLE Peserta
+ADD Password VARCHAR(25) NULL;

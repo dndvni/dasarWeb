@@ -1,0 +1,18 @@
+use PendaftaranSeminarDB;
+
+CREATE TABLE Peserta (
+	PesertaID INT PRIMARY KEY IDENTITY(1,1),
+	NamaLengkap VARCHAR(100) NOT NULL,
+	Email VARCHAR(100) NOT NULL UNIQUE,
+	NoTelepon VARCHAR(20),
+	TanggalRegistrasi DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Pendaftaran (
+	PendaftaranID INT PRIMARY KEY IDENTITY(1,1),
+	PesertaID INT NOT NULL,
+	NamaSeminar VARCHAR(100) NOT NULL,
+	TanggalSeminar DATETIME DEFAULT GETDATE(),
+	FOREIGN KEY (PesertaID) REFERENCES Peserta(PesertaID)
+);
+
